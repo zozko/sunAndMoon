@@ -34,8 +34,8 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-
       }
+
       .info-box {
         position: relative;
         display: inline-block;
@@ -84,6 +84,9 @@
         justify-content: center;
         width: 100%;
         text-align: center;
+      }
+      .place {
+        top: clac(100vh - 55vh / 4);        
       }
 
       #map {
@@ -158,8 +161,14 @@
         position: relative;
         top: 60vh;}
 		
-      /* ### mobil screen ### */
+      /* ### mobil screen ###                                           ###########*/
       @media only screen and (max-width: 600px) {
+       .place {
+        position: absolute;
+        top: clac(100vh - 60vh / 4);
+       
+      }
+
         .info-box {
           display: block;
           height: auto;
@@ -207,7 +216,7 @@
       <p>your GPS coords:</p>
       <p><span class="a"></span> <span class="b"></span> <br /></p>
     </div>
-    <div id="showTime">
+    <div id="showTime" class="place">
       <h1><span id="hatralevo-ido"></span> <span id="percek"></span></h1>
     </div>
     <div id=info_wrapper>
@@ -492,7 +501,7 @@
         let merek = setInterval(() => {
           countS += 1;
           //console.log('a szamlalo :' + countS);
-          if (countS == 59) {
+          if (countS == 45) {
             //document.getElementsByClassName('gps-info-box')[0].style.opacity =   '0';
             document.getElementsByClassName('gps-info-box')[0].style.display =
               'none';
