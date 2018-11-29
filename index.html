@@ -48,12 +48,16 @@
       #hatralevo-ido {
         position: relative;
         width: 100%;
+        height: 100%;
 
         text-align: center;
         font-weight: 600;
+
         transition: all 1s linear;
       }
+      
       #percek {
+        height: 100%;
         font-weight: 400;
         transition: all 1s linear;
       }
@@ -83,12 +87,10 @@
         display: flex;
         justify-content: center;
         width: 100%;
-        text-align: center;
+        text-align: center;        
       }
-      .place {
-        top: clac(100vh - 55vh / 4);        
-      }
-
+     
+      
       #map {
         width: 60%;
         height: 90%;
@@ -163,12 +165,6 @@
 		
       /* ### mobil screen ###                                           ###########*/
       @media only screen and (max-width: 600px) {
-       .place {
-        position: absolute;
-        top: clac(100vh - 60vh / 4);
-       
-      }
-
         .info-box {
           display: block;
           height: auto;
@@ -181,6 +177,14 @@
 
           overflow: visible;
         }
+
+        #info_wrapper {
+          position: relative;
+          top: 55vh;   
+          left: 0;  
+          transform: translate(0, -55vh);  
+        }
+
         #map {
           width: 100%;
           height: 60vh;
@@ -501,13 +505,12 @@
         let merek = setInterval(() => {
           countS += 1;
           //console.log('a szamlalo :' + countS);
-          if (countS == 45) {
+          if (countS == 4) {
             //document.getElementsByClassName('gps-info-box')[0].style.opacity =   '0';
             document.getElementsByClassName('gps-info-box')[0].style.display =
               'none';
-            document.getElementById('showTime').style.margin = '0';
-
-            document.getElementById('showTime').style.fontSize = '1.8em';
+            document.getElementById('showTime').style.margin = '0';           
+            document.getElementById('showTime').style.fontSize = '2em';
           }
 
           // ################## automata idobeallitas ######################################################
