@@ -481,6 +481,9 @@
           }
         }
         function imgCreator(kep) {
+          if (kep == 'images/Moon.png') {
+            document.getElementById('forgo').style.opacity = "0.25";
+          }
           console.log('a kapcsolo a kepkreatorban' + kapcsolo);
           if (kapcsolo == 1 || kapcsolo == 2) {
             let fo = document.getElementById('forgo');
